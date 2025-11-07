@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Customer Insights - Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="navbar">
+  <h1 class="logo">🔮 Customer Churn Prediction</h1>
+  <nav class="nav-links">
+    <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">Home</a>
+    <a href="/comparison" class="nav-item {% if request.path == '/comparison' %}active{% endif %}">Model Comparison</a>
+    <a href="/insights" class="nav-item {% if request.path == '/insights' %}active{% endif %}">Insights</a>
+    <a href="/about" class="nav-item {% if request.path == '/about' %}active{% endif %}">About</a>
+  </nav>
+</header>
+
+
+      <div class="card">
+        <p>These visual insights help understand patterns in customer churn behavior.</p>
+
+        <h3>📊 Churn Distribution</h3>
+        <img src="{{ url_for('static', filename='churn_distribution.png') }}" alt="Churn Distribution">
+
+        <h3>💸 Monthly Charges vs Churn</h3>
+        <img src="{{ url_for('static', filename='charges_vs_churn.png') }}" alt="Charges vs Churn">
+
+        <h3>⏳ Tenure vs Churn</h3>
+        <img src="{{ url_for('static', filename='tenure_vs_churn.png') }}" alt="Tenure vs Churn">
+
+        <p>These graphs highlight that customers with shorter tenures and higher monthly charges are more likely to churn.</p>
+      </div>
+
+      <footer>
+        <p>📈 Visual insights derived from the dataset used in churn analysis.</p>
+      </footer>
+    </div>
+  </body>
+</html>

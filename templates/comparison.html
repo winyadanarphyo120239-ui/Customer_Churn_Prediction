@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Model Comparison - Customer Churn</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="navbar">
+  <h1 class="logo">🔮 Customer Churn Prediction</h1>
+  <nav class="nav-links">
+    <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">Home</a>
+    <a href="/comparison" class="nav-item {% if request.path == '/comparison' %}active{% endif %}">Model Comparison</a>
+    <a href="/insights" class="nav-item {% if request.path == '/insights' %}active{% endif %}">Insights</a>
+    <a href="/about" class="nav-item {% if request.path == '/about' %}active{% endif %}">About</a>
+  </nav>
+</header>
+
+
+      <div class="card">
+        <p>This page compares the performance of different trained models used for churn prediction.</p>
+
+        <ul>
+          <li><strong>Random Forest:</strong> High accuracy and robust to overfitting.</li>
+          <li><strong>Decision Tree:</strong> Easy to interpret, but may overfit small data.</li>
+          <li><strong>Default Model (model.pkl):</strong> Baseline reference model.</li>
+        </ul>
+
+        <h3>📊 Accuracy Comparison</h3>
+        <img src="{{ url_for('static', filename='comparison.png') }}" alt="Model Comparison Chart" class="comparison-chart">
+
+        <p>You can showcase key metrics (Accuracy, Precision, Recall, F1 Score) here for each model in tabular or graphical form.</p>
+      </div>
+
+      <footer>
+        <p>⚙️ Comparison between multiple ML models used in churn prediction.</p>
+      </footer>
+    </div>
+  </body>
+</html>

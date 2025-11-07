@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About — Customer Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="navbar">
+  <h1 class="logo">🔮 Customer Churn Prediction</h1>
+  <nav class="nav-links">
+    <a href="/" class="nav-item {% if request.path == '/' %}active{% endif %}">Home</a>
+    <a href="/comparison" class="nav-item {% if request.path == '/comparison' %}active{% endif %}">Model Comparison</a>
+    <a href="/insights" class="nav-item {% if request.path == '/insights' %}active{% endif %}">Insights</a>
+    <a href="/about" class="nav-item {% if request.path == '/about' %}active{% endif %}">About</a>
+  </nav>
+</header>
+
+
+      <div class="card">
+        <h2>📊 What is Customer Churn?</h2>
+        <p>
+          <strong>Customer churn</strong> refers to when a customer 
+          <em>stops using a company's service</em> or <em>cancels their subscription</em>. 
+          For example, if a telecom company loses 100 out of 1000 customers in a month, 
+          the churn rate is 10%.
+        </p>
+
+        <p>
+          In business, reducing churn is very important — 
+          because acquiring new customers is often more expensive than keeping existing ones.
+        </p>
+
+        <div class="result-box">
+          <h3>💡 Example:</h3>
+          <p>
+            If a customer’s contract is “Month-to-month” and their monthly charge is high,
+            your model may predict a higher chance of <strong>Churn</strong>.
+            But if they have a “Two year” contract and lower monthly charge,
+            the model may predict <strong>No Churn</strong>.
+          </p>
+        </div>
+
+        <h2>🤖 About This System</h2>
+        <p>
+          This system predicts whether a customer is likely to churn or not using machine learning models. 
+          It analyzes various attributes such as:
+        </p>
+
+        <ul>
+          <li>Age</li>
+          <li>Gender</li>
+          <li>Tenure (how long they’ve been a customer)</li>
+          <li>Monthly Charges</li>
+          <li>Contract Type</li>
+          <li>Internet Service</li>
+          <li>Tech Support Availability</li>
+        </ul>
+
+        <p>
+          Multiple models like <strong>Logistic Regression</strong>, 
+          <strong>Decision Tree</strong>, and <strong>Random Forest</strong> 
+          are used to compare prediction accuracy.
+        </p>
+
+        <p>
+          This project is built using <strong>Python, Flask, and Machine Learning</strong> — 
+          designed for  academic project .
+        </p>
+      </div>
+
+      <footer>
+        <p>© 2025 Customer Churn Prediction — Developed for Academic Project</p>
+      </footer>
+    </div>
+  </body>
+</html>
